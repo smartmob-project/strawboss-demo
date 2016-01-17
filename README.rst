@@ -21,7 +21,7 @@ Instructions
 Download the latest master::
 
   $ curl -L -o strawboss-demo-master.zip \
-       https://github.com/smartmob-project/strawboss/archive/master.tar.gz
+       https://github.com/smartmob-project/strawboss-demo/archive/master.tar.gz
   $ tar --extract --strip-components=1 --file strawboss-demo-master.zip
 
 
@@ -41,7 +41,25 @@ Install the application dependencies::
 Run processes in the Procfile_ (CTRL-C to end)::
 
   $ strawboss
+  ... [strawboss] web.0(...) spawned.
+  ... [web.0] * Running on http://127.0.0.1:8081/ (Press CTRL-C to quit)
 
+Point your browser to http://127.0.0.1:8081/ and see the result.  The web
+process' access logs should show access from the browser::
+
+  ... [web.0] 127.0.0.1 - - [...] "GET / HTTP/1.1" 200
+  ... [web.0] 127.0.0.1 - - [...] "GET /favicon.ico HTTP/1.1" 404 -
+
+When you're down, kill everything with CTRL-C and see the shutdown logs::
+
+  ... [strawboss] web.0(...) killed.
+  ... [strawboss] EOF from web.0(...).
+  ... [strawboss] web.0(...) completed with exit status -9.
+
+Verify the exit status::
+
+  $ echo $?
+  0
 
 Contributing
 ------------
