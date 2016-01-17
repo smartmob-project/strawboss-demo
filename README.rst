@@ -18,7 +18,29 @@ tracker`_.
 Instructions
 ------------
 
-TBD.
+Download the latest master::
+
+  $ curl -L -o strawboss-demo-master.zip \
+       https://github.com/smartmob-project/strawboss/archive/master.tar.gz
+  $ tar --extract --strip-components=1 --file strawboss-demo-master.zip
+
+
+Create a new Python 3.5 virtual environment::
+
+  $ python3.5 -m venv env
+  $ . env/bin/activate
+
+Install the strawboss_ process runner::
+
+  $ pip install strawboss
+
+Install the application dependencies::
+
+  $ pip install -r requirements.txt
+
+Run processes in the Procfile_ (CTRL-C to end)::
+
+  $ strawboss
 
 
 Contributing
