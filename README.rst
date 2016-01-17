@@ -1,6 +1,9 @@
 strawboss-demo - demo project
 =============================
 
+.. image:: https://img.shields.io/travis/smartmob-project/strawboss-demo.svg
+   :target: https://travis-ci.org/smartmob-project/strawboss-demo
+   :alt: Current build status
 
 Description
 -----------
