@@ -61,6 +61,8 @@ Verify the exit status::
   $ echo $?
   0
 
+.. _Procfile: http://smartmob-rfc.readthedocs.org/en/latest/1-procfile.html
+
 Contributing
 ------------
 
