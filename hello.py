@@ -10,7 +10,4 @@ def hello():
     return "Hello World!"
 
 if __name__ == "__main__":
-    app.config.update(
-        SERVER_NAME='127.0.0.1:%d' % int(os.environ.get('PORT', 5000)),
-    )
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port='%d'  % int(os.environ.get('PORT', 5000)))
